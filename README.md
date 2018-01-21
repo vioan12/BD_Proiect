@@ -10,9 +10,9 @@ Sa se implementeze o aplicatie pentru administrarea unui campionat de arte marti
 Cerinte:
 1.	Proiectarea bazei de date
 2.	Implementarea unei aplicatii client care sa permita:
-a.	Administarea organizatiilor, participantilor, etapelor, categoriilor si a criteriilor de punctare. 
-b.	Administrarea meciurilor in cadrul unei etape.
-c.	Clasamente individuale in fiecare etapa si la finalul campionatului.
-d.	In cadrul fiecarei etape, tabloul de lupte se va realiza aleatoriu.
-e.	Clasamente pentru organizatii in fiecare etapa si la finalul campionatului.
-f.	Simulator al unei competitii care sa decida castigatorii meciurilor.
+a)	Administarea organizatiilor, participantilor, etapelor, categoriilor si a criteriilor de punctare. 
+b)	Administrarea meciurilor in cadrul unei etape.
+c)	Clasamente individuale in fiecare etapa si la finalul campionatului.
+d)	In cadrul fiecarei etape, tabloul de lupte se va realiza aleatoriu.
+e)	Clasamente pentru organizatii in fiecare etapa si la finalul campionatului.
+f)	Simulator al unei competitii care sa decida castigatorii meciurilor.
