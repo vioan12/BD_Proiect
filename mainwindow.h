@@ -2,10 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+//#include<QSqlDatabase>
 
 namespace Ui {
 class MainWindow;
 }
+class AddParticipant;
 
 class MainWindow : public QMainWindow
 {
@@ -14,9 +16,13 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+private slots:
+    void OnAddParticipant();
 
 private:
     Ui::MainWindow *ui;
+    AddParticipant *mAddParticipant;
+    //QSqlDatabase db;
 };
 
 #endif // MAINWINDOW_H
