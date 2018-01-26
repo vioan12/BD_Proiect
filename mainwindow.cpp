@@ -3,6 +3,7 @@
 #include "addparticipant.h"
 #include "addorganizatie.h"
 #include "addcategoriegreutate.h"
+#include "databasemanager.h"
 
 MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -13,15 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainW
     connect(ui->actionAddParticipant,&QAction::triggered,this,&MainWindow::OnAddParticipant);
     connect(ui->actionAddOrganizatie,&QAction::triggered,this,&MainWindow::OnAddOrganizatie);
     connect(ui->actionAddCategorieGreutate,&QAction::triggered,this,&MainWindow::OnAddCategorieGreutate);
-    /*
-    db = QSqlDatabase::addDatabase("QPSQL");
-    db.setHostName("tantor.db.elephantsql.com");
-    db.setDatabaseName("ripevura");
-    db.setUserName("ripevura");
-    db.setPassword("5QnCiePpUx3L9t_FE2okYHnB0jdkhJj7");
-    bool ok = db.open();
-    */
-
+    DatabaseManager DBM;
 }
 
 void MainWindow::OnAddParticipant()

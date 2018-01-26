@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-//#include<QSqlDatabase>
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +28,6 @@ private:
     AddParticipant *mAddParticipant;
     AddOrganizatie *mAddOrganizatie;
     AddCategorieGreutate *mAddCategorieGreutate;
-    //QSqlDatabase db;
 };
 
 #endif // MAINWINDOW_H
