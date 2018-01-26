@@ -8,6 +8,7 @@ namespace Ui {
 class MainWindow;
 }
 class AddParticipant;
+class AddOrganizatie;
 
 class MainWindow : public QMainWindow
 {
@@ -18,10 +19,13 @@ public:
     ~MainWindow();
 private slots:
     void OnAddParticipant();
+    void OnAddOrganizatie();
+
 
 private:
     Ui::MainWindow *ui;
     AddParticipant *mAddParticipant;
+    AddOrganizatie *mAddOrganizatie;
     //QSqlDatabase db;
 };
 

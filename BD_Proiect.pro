@@ -26,12 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    addparticipant.cpp
+    addparticipant.cpp \
+    addorganizatie.cpp
 
 HEADERS += \
         mainwindow.h \
-    addparticipant.h
+    addparticipant.h \
+    addorganizatie.h
 
 FORMS += \
         mainwindow.ui \
-    addparticipant.ui
+    addparticipant.ui \
+    addorganizatie.ui

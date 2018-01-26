@@ -67,6 +67,44 @@
      <string>PARTICIPANT</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="TableOrganizatie">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>331</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>NUME</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ORAS</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>250</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ORGANIZTIE</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -81,7 +119,8 @@
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionAdd"/>
+    <addaction name="actionAddParticipant"/>
+    <addaction name="actionAddOrganizatie"/>
    </widget>
    <addaction name="menuEdit"/>
   </widget>
@@ -94,9 +133,14 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionAdd">
+  <action name="actionAddParticipant">
    <property name="text">
     <string>Add Participant</string>
+   </property>
+  </action>
+  <action name="actionAddOrganizatie">
+   <property name="text">
+    <string>Add Organizatie</string>
    </property>
   </action>
  </widget>
