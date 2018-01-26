@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1304</width>
-    <height>616</height>
+    <height>681</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>631</width>
+      <width>641</width>
       <height>171</height>
      </rect>
     </property>
@@ -71,8 +71,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
-      <width>331</width>
+      <y>240</y>
+      <width>341</width>
       <height>171</height>
      </rect>
     </property>
@@ -96,7 +96,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>250</y>
+      <y>220</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -104,6 +104,39 @@
     <property name="text">
      <string>ORGANIZTIE</string>
     </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CATEGORIEGREUTATE</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="TableCategorieGreutate">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>241</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>GREUTATE</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -121,6 +154,7 @@
     </property>
     <addaction name="actionAddParticipant"/>
     <addaction name="actionAddOrganizatie"/>
+    <addaction name="actionAddCategorieGreutate"/>
    </widget>
    <addaction name="menuEdit"/>
   </widget>
@@ -141,6 +175,11 @@
   <action name="actionAddOrganizatie">
    <property name="text">
     <string>Add Organizatie</string>
+   </property>
+  </action>
+  <action name="actionAddCategorieGreutate">
+   <property name="text">
+    <string>Add CategorieGreutate</string>
    </property>
   </action>
  </widget>

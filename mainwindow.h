@@ -9,6 +9,7 @@ class MainWindow;
 }
 class AddParticipant;
 class AddOrganizatie;
+class AddCategorieGreutate;
 
 class MainWindow : public QMainWindow
 {
@@ -20,12 +21,14 @@ public:
 private slots:
     void OnAddParticipant();
     void OnAddOrganizatie();
+    void OnAddCategorieGreutate();
 
 
 private:
     Ui::MainWindow *ui;
     AddParticipant *mAddParticipant;
     AddOrganizatie *mAddOrganizatie;
+    AddCategorieGreutate *mAddCategorieGreutate;
     //QSqlDatabase db;
 };
 

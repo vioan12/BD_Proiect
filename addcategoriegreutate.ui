@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddOrganizatie</class>
- <widget class="QDialog" name="AddOrganizatie">
+ <class>AddCategorieGreutate</class>
+ <widget class="QDialog" name="AddCategorieGreutate">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>123</height>
+    <height>94</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>90</y>
+     <y>60</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -35,7 +35,7 @@
      <x>10</x>
      <y>10</y>
      <width>371</width>
-     <height>81</height>
+     <height>51</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -52,22 +52,12 @@
     <item row="1" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>NUME</string>
+       <string>GREUTATE</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="TB_nume"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>ORAS</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="TB_oras"/>
+     <widget class="QLineEdit" name="TB_greutate"/>
     </item>
    </layout>
   </widget>
@@ -77,7 +67,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>AddOrganizatie</receiver>
+   <receiver>AddCategorieGreutate</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -93,7 +83,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>AddOrganizatie</receiver>
+   <receiver>AddCategorieGreutate</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

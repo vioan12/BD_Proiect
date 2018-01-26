@@ -27,14 +27,17 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     addparticipant.cpp \
-    addorganizatie.cpp
+    addorganizatie.cpp \
+    addcategoriegreutate.cpp
 
 HEADERS += \
         mainwindow.h \
     addparticipant.h \
-    addorganizatie.h
+    addorganizatie.h \
+    addcategoriegreutate.h
 
 FORMS += \
         mainwindow.ui \
     addparticipant.ui \
-    addorganizatie.ui
+    addorganizatie.ui \
+    addcategoriegreutate.ui

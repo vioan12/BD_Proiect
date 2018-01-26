@@ -2,14 +2,17 @@
 #include "ui_mainwindow.h"
 #include "addparticipant.h"
 #include "addorganizatie.h"
+#include "addcategoriegreutate.h"
 
 MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     mAddParticipant=new AddParticipant(this);
     mAddOrganizatie=new AddOrganizatie(this);
+    mAddCategorieGreutate=new AddCategorieGreutate(this);
     connect(ui->actionAddParticipant,&QAction::triggered,this,&MainWindow::OnAddParticipant);
     connect(ui->actionAddOrganizatie,&QAction::triggered,this,&MainWindow::OnAddOrganizatie);
+    connect(ui->actionAddCategorieGreutate,&QAction::triggered,this,&MainWindow::OnAddCategorieGreutate);
     /*
     db = QSqlDatabase::addDatabase("QPSQL");
     db.setHostName("tantor.db.elephantsql.com");
@@ -52,6 +55,21 @@ void MainWindow::OnAddOrganizatie()
         ui->TableOrganizatie->setItem(count,0,new QTableWidgetItem(id));
         ui->TableOrganizatie->setItem(count,1,new QTableWidgetItem(nume));
         ui->TableOrganizatie->setItem(count,2,new QTableWidgetItem(oras));
+    }
+
+}
+
+void MainWindow::OnAddCategorieGreutate()
+{
+    int ok=mAddCategorieGreutate->exec();
+    if(ok==QDialog::Accepted)
+    {
+        QString id,greutate;
+        mAddCategorieGreutate->Data(id,greutate);
+        int count=ui->TableCategorieGreutate->rowCount();
+        ui->TableCategorieGreutate->insertRow(count);
+        ui->TableCategorieGreutate->setItem(count,0,new QTableWidgetItem(id));
+        ui->TableCategorieGreutate->setItem(count,1,new QTableWidgetItem(greutate));
     }
 
 }
