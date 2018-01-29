@@ -1,11 +1,10 @@
 #include "tur.h"
-#include"string.h"
 
-Tur::Tur(int id, char nume[], int punctaj)
+Tur::Tur(int id, QString nume, int punctaj)
 {
     this->id=id;
     this->punctaj=punctaj;
-    strcpy(this->nume,nume);
+    this->nume=nume;
 }
 
 int Tur::Get_id()
@@ -13,7 +12,7 @@ int Tur::Get_id()
     return this->id;
 }
 
-char* Tur::Get_nume()
+QString Tur::Get_nume()
 {
     return this->nume;
 }

@@ -1,17 +1,18 @@
 #ifndef ORGANIZATIE_H
 #define ORGANIZATIE_H
 
+#include<QString>
 
 class Organizatie
 {
 private:
     int id;
-    char nume[30],oras[30];
+    QString nume,oras;
 public:
-    Organizatie(int id, char nume[], char oras[]);
+    Organizatie(int id, QString nume, QString oras);
     int Get_id();
-    char* Get_nume();
-    char* Get_oras();
+    QString Get_nume();
+    QString Get_oras();
 };
 
 #endif // ORGANIZATIE_H

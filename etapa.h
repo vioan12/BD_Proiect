@@ -1,16 +1,17 @@
 #ifndef ETAPA_H
 #define ETAPA_H
 
+#include<QString>
 
 class Etapa
 {
 private:
     int id;
-    char nume[30];
+    QString nume;
 public:
-    Etapa(int id, char nume[]);
+    Etapa(int id, QString nume);
     int Get_id();
-    char* Get_nume();
+    QString Get_nume();
 };
 
 #endif // ETAPA_H

@@ -1,16 +1,17 @@
 #ifndef CATEGORIEGREUTATE_H
 #define CATEGORIEGREUTATE_H
 
+#include <QString>
 
 class CategorieGreutate
 {
 private:
     int id;
-    char greutate[30];
+    QString greutate;
 public:
-    CategorieGreutate(int id, char greutate[]);
+    CategorieGreutate(int id, QString greutate);
     int Get_id();
-    char* Get_greutate();
+    QString Get_greutate();
 };
 
 #endif // CATEGORIEGREUTATE_H

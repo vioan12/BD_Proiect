@@ -1,10 +1,9 @@
 #include "etapa.h"
-#include"string.h"
 
-Etapa::Etapa(int id, char nume[])
+Etapa::Etapa(int id, QString nume)
 {
     this->id=id;
-    strcpy(this->nume,nume);
+    this->nume=nume;
 }
 
 int Etapa::Get_id()
@@ -12,7 +11,7 @@ int Etapa::Get_id()
     return this->id;
 }
 
-char* Etapa::Get_nume()
+QString Etapa::Get_nume()
 {
     return this->nume;
 }

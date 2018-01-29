@@ -1,11 +1,10 @@
 #include "organizatie.h"
-#include"string.h"
 
-Organizatie::Organizatie(int id, char nume[], char oras[])
+Organizatie::Organizatie(int id, QString nume, QString oras)
 {
     this->id=id;
-    strcpy(this->nume,nume);
-    strcpy(this->oras,oras);
+    this->nume=nume;
+    this->oras=oras;
 }
 
 int Organizatie::Get_id()
@@ -13,12 +12,12 @@ int Organizatie::Get_id()
     return this->id;
 }
 
-char* Organizatie::Get_nume()
+QString Organizatie::Get_nume()
 {
     return this->nume;
 }
 
-char* Organizatie::Get_oras()
+QString Organizatie::Get_oras()
 {
     return this->oras;
 }

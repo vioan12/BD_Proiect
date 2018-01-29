@@ -1,10 +1,9 @@
 #include "mecicastigator.h"
-#include"string.h"
 
-MeciCastigator::MeciCastigator(int id_meci, char scor[], int id_castigator)
+MeciCastigator::MeciCastigator(int id_meci, QString scor, int id_castigator)
 {
     this->id_meci=id_meci;
-    strcpy(this->scor,scor);
+    this->scor=scor;
     this->id_castigator=id_castigator;
 }
 
@@ -13,7 +12,7 @@ int MeciCastigator::Get_id_meci()
     return this->id_meci;
 }
 
-char* MeciCastigator::Get_scor()
+QString MeciCastigator::Get_scor()
 {
     return this->scor;
 }

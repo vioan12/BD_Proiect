@@ -1,14 +1,14 @@
 #include "meci.h"
 
-Meci::Meci(int id, int id_participant1, int id_participant2, int id_etapa, int id_tur, char data[], char ora[])
+Meci::Meci(int id, int id_participant1, int id_participant2, int id_etapa, int id_tur, QString data, QString ora)
 {
     this->id=id;
     this->id_participant1=id_participant1;
     this->id_participant2=id_participant2;
     this->id_etapa=id_etapa;
     this->id_tur=id_tur;
-    strcpy(this->data,data);
-    strcpy(this->ora,ora);
+    this->data=data;
+    this->ora=ora;
 }
 
 int Meci::Get_id()
@@ -36,12 +36,12 @@ int Meci::Get_id_tur()
     return this->id_tur;
 }
 
-char* Meci::Get_data()
+QString Meci::Get_data()
 {
     return this->data;
 }
 
-char* Meci::Get_ora()
+QString Meci::Get_ora()
 {
     return this->ora;
 }

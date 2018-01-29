@@ -1,16 +1,17 @@
 #ifndef TUR_H
 #define TUR_H
 
+#include<QString>
 
 class Tur
 {
 private:
     int id,punctaj;
-    char nume[30];
+    QString nume;
 public:
-    Tur(int id, char nume[], int punctaj);
+    Tur(int id, QString nume, int punctaj);
     int Get_id();
-    char* Get_nume();
+    QString Get_nume();
     int Get_punctaj();
 };
 

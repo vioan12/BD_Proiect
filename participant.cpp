@@ -1,12 +1,11 @@
 #include "participant.h"
-#include "string.h"
 
-Participant::Participant(int id, char nume[], char varsta[], char experienta[], int id_greutate, int id_organizatie)
+Participant::Participant(int id, QString nume, QString varsta, QString experienta, int id_greutate, int id_organizatie)
 {
     this->id=id;
-    strcpy(this->nume,nume);
-    strcpy(this->varsta,varsta);
-    strcpy(this->experienta,experienta);
+    this->nume=nume;
+    this->varsta=varsta;
+    this->experienta=experienta;
     this->id_greutate=id_greutate;
     this->id_organizatie=id_organizatie;
 }
@@ -26,17 +25,17 @@ int Participant::Get_id_organizatie()
     return this->id_organizatie;
 }
 
-char* Participant::Get_nume()
+QString Participant::Get_nume()
 {
     return this->nume;
 }
 
-char* Participant::Get_varsta()
+QString Participant::Get_varsta()
 {
     return this->varsta;
 }
 
-char* Participant::Get_experienta()
+QString Participant::Get_experienta()
 {
     return this->experienta;
 }
