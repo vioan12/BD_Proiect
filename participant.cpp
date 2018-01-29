@@ -1,7 +1,7 @@
 #include "participant.h"
 #include "string.h"
 
-Participant::Participant(int id, char nume[30], char varsta[30], char experienta[30], int id_greutate, int id_organizatie)
+Participant::Participant(int id, char nume[], char varsta[], char experienta[], int id_greutate, int id_organizatie)
 {
     this->id=id;
     strcpy(this->nume,nume);
