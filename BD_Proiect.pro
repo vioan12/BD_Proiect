@@ -31,7 +31,8 @@ SOURCES += \
     addcategoriegreutate.cpp \
     databasemanager.cpp \
     participant.cpp \
-    categoriegreutate.cpp
+    categoriegreutate.cpp \
+    organizatie.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +41,8 @@ HEADERS += \
     addcategoriegreutate.h \
     databasemanager.h \
     participant.h \
-    categoriegreutate.h
+    categoriegreutate.h \
+    organizatie.h
 
 FORMS += \
         mainwindow.ui \
