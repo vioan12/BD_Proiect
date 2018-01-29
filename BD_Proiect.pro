@@ -29,14 +29,16 @@ SOURCES += \
     addparticipant.cpp \
     addorganizatie.cpp \
     addcategoriegreutate.cpp \
-    databasemanager.cpp
+    databasemanager.cpp \
+    participant.cpp
 
 HEADERS += \
         mainwindow.h \
     addparticipant.h \
     addorganizatie.h \
     addcategoriegreutate.h \
-    databasemanager.h
+    databasemanager.h \
+    participant.h
 
 FORMS += \
         mainwindow.ui \
