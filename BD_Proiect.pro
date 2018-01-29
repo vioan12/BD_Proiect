@@ -37,7 +37,8 @@ SOURCES += \
     clasament.cpp \
     tur.cpp \
     etapa.cpp \
-    mecicastigator.cpp
+    mecicastigator.cpp \
+    meci.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,7 +53,8 @@ HEADERS += \
     clasament.h \
     tur.h \
     etapa.h \
-    mecicastigator.h
+    mecicastigator.h \
+    meci.h
 
 FORMS += \
         mainwindow.ui \
