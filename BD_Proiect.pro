@@ -36,7 +36,8 @@ SOURCES += \
     clasamentgreutate.cpp \
     clasament.cpp \
     tur.cpp \
-    etapa.cpp
+    etapa.cpp \
+    mecicastigator.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,7 +51,8 @@ HEADERS += \
     clasamentgreutate.h \
     clasament.h \
     tur.h \
-    etapa.h
+    etapa.h \
+    mecicastigator.h
 
 FORMS += \
         mainwindow.ui \
