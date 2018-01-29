@@ -33,7 +33,8 @@ SOURCES += \
     participant.cpp \
     categoriegreutate.cpp \
     organizatie.cpp \
-    clasamentgreutate.cpp
+    clasamentgreutate.cpp \
+    clasament.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,7 +45,8 @@ HEADERS += \
     participant.h \
     categoriegreutate.h \
     organizatie.h \
-    clasamentgreutate.h
+    clasamentgreutate.h \
+    clasament.h
 
 FORMS += \
         mainwindow.ui \
