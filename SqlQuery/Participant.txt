@@ -1,0 +1,8 @@
+CREATE TABLE Participant(
+ID int NOT NULL PRIMARY KEY,
+Nume varchar (30),
+Varsta varchar (30),
+Experienta varchar (30),
+ID_Greutate int NOT NULL,
+ID_Organizatie int NOT NULL
+);
