@@ -1,0 +1,9 @@
+CREATE TABLE Meci(
+ID int NOT NULL PRIMARY KEY,
+ID_Participant1 int NOT NULL,
+ID_Participant2 int NOT NULL,
+ID_Etapa int NOT NULL,
+ID_Tur int NOT NULL,
+Data varchar (30),
+Ora varchar (30)
+);

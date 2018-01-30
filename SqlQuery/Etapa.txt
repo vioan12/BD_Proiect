@@ -1,0 +1,4 @@
+CREATE TABLE Etapa(
+ID int NOT NULL PRIMARY KEY,
+Nume varchar (30)
+);
