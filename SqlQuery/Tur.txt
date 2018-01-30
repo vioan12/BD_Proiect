@@ -1,5 +1,5 @@
 CREATE TABLE Tur(
 ID int NOT NULL PRIMARY KEY,
 Nume varchar (30),
-Punctaj varchar (30)
+Punctaj int NOT NULL
 );
