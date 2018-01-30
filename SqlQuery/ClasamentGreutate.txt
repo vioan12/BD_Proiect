@@ -1,0 +1,5 @@
+CREATE TABLE ClasamentGreutate(
+ID_Clasament int NOT NULL PRIMARY KEY,
+Nume varchar (30),
+ID_CatGreutate int NOT NULL
+);
