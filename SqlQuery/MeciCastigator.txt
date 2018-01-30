@@ -1,0 +1,5 @@
+CREATE TABLE MeciCastigator(
+ID_Meci int NOT NULL,
+Scor varchar (30),
+ID_Castigator int NOT NULL
+);
