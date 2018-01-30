@@ -1,0 +1,5 @@
+CREATE TABLE Clasament(
+ID int NOT NULL,
+ID_Organizatie int NOT NULL,
+Punctaj int NOT NULL
+);
