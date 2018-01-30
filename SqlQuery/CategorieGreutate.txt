@@ -1,0 +1,4 @@
+CREATE TABLE CategorieGreutate(
+ID int NOT NULL PRIMARY KEY,
+Greutate varchar (30)
+);
