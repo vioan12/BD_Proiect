@@ -156,6 +156,8 @@
     <addaction name="actionAddOrganizatie"/>
     <addaction name="actionAddCategorieGreutate"/>
     <addaction name="actionDeleteParticipant"/>
+    <addaction name="actionDeleteOrganizatie"/>
+    <addaction name="actionDeleteCategorieGreutate"/>
    </widget>
    <addaction name="menuEdit"/>
   </widget>
@@ -186,6 +188,16 @@
   <action name="actionDeleteParticipant">
    <property name="text">
     <string>Delete Participant</string>
+   </property>
+  </action>
+  <action name="actionDeleteOrganizatie">
+   <property name="text">
+    <string>Delete Organizatie</string>
+   </property>
+  </action>
+  <action name="actionDeleteCategorieGreutate">
+   <property name="text">
+    <string>Delete CategorieGreutate</string>
    </property>
   </action>
  </widget>

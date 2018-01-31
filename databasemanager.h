@@ -20,6 +20,7 @@ private:
     bool loaded;
 public:
     DatabaseManager();
+
     void AdaugaParticipant(Participant &participant);
     void AdaugaCategorieGreutate(CategorieGreutate &categoriegreutate);
     void AdaugaOrganizatie(Organizatie &organizatie);
@@ -29,6 +30,17 @@ public:
     void AdaugaTur(Tur &tur);
     void AdaugaMeciCastigator(MeciCastigator &mecicastigator);
     void AdaugaMeci(Meci &meci);
+
+    void StergeParticipant(int id);
+    void StergeCategorieGreutate(int id);
+    void StergeOrganizatie(int id);
+    void StergeClasament(Clasament &clasament);
+    void StergeClasamentGreutate(int id);
+    void StergeEtapa(int id);
+    void StergeTur(int id);
+    void StergeMeciCastigator(MeciCastigator &mecicastigator);
+    void StergeMeci(int id);
+
     bool get_loaded();
 };
 

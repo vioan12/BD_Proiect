@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainW
     connect(ui->actionAddOrganizatie,&QAction::triggered,this,&MainWindow::OnAddOrganizatie);
     connect(ui->actionAddCategorieGreutate,&QAction::triggered,this,&MainWindow::OnAddCategorieGreutate);
     connect(ui->actionDeleteParticipant,&QAction::triggered,this,&MainWindow::OnDeleteParticipant);
+    connect(ui->actionDeleteOrganizatie,&QAction::triggered,this,&MainWindow::OnDeleteOrganizatie);
+    connect(ui->actionDeleteCategorieGreutate,&QAction::triggered,this,&MainWindow::OnDeleteCategorieGreutate);
 }
 
 void MainWindow::OnAddParticipant()

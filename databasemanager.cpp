@@ -153,3 +153,106 @@ void DatabaseManager::AdaugaMeci(Meci &meci)
         query.exec();
     }
 }
+
+void DatabaseManager::StergeParticipant(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM participant WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeCategorieGreutate(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM categoriegreutate WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeOrganizatie(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM organizatie WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeClasament(Clasament &clasament)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM clasament WHERE id = (:id) AND id_organizatie = (:id_organizatie) AND punctaj = (:punctaj)");
+        query.bindValue(":id", clasament.Get_id());
+        query.bindValue(":id_organizatie", clasament.Get_id_organizatie());
+        query.bindValue(":punctaj", clasament.Get_punctaj());
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeClasamentGreutate(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM clasamentgreutate WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeEtapa(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM etapa WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeTur(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM tur WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeMeciCastigator(MeciCastigator &mecicastigator)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM mecicastigator WHERE id_meci = (:id_meci) AND scor = (:scor) AND id_castigator = (:id_castigator)");
+        query.bindValue(":id_meci", mecicastigator.Get_id_meci());
+        query.bindValue(":scor", mecicastigator.Get_scor());
+        query.bindValue(":id_castigator", mecicastigator.Get_id_castigator());
+        query.exec();
+    }
+}
+
+void DatabaseManager::StergeMeci(int id)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("DELETE FROM meci WHERE id = (:id)");
+        query.bindValue(":id", id);
+        query.exec();
+    }
+}
