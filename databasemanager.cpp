@@ -94,3 +94,16 @@ void DatabaseManager::AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreuta
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaEtapa(Etapa &etapa)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO etapa(id, nume)"
+                      "VALUES(:id, :nume)");
+        query.bindValue(":id", etapa.Get_id());
+        query.bindValue(":nume", etapa.Get_nume());
+        query.exec();
+    }
+}

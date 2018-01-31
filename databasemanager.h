@@ -8,6 +8,7 @@
 #include"organizatie.h"
 #include"clasament.h"
 #include"clasamentgreutate.h"
+#include"etapa.h"
 
 class DatabaseManager
 {
@@ -21,6 +22,7 @@ public:
     void AdaugaOrganizatie(Organizatie &organizatie);
     void AdaugaClasament(Clasament &clasament);
     void AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreutate);
+    void AdaugaEtapa(Etapa &etapa);
     bool get_loaded();
 };
 
