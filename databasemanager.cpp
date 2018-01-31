@@ -66,3 +66,17 @@ void DatabaseManager::AdaugaOrganizatie(Organizatie &organizatie)
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaClasament(Clasament &clasament)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO clasament(id, id_organizatie, punctaj )"
+                      "VALUES(:id, :id_organizatie, :punctaj)");
+        query.bindValue(":id", clasament.Get_id());
+        query.bindValue(":id_organizatie", clasament.Get_id_organizatie());
+        query.bindValue(":punctaj", clasament.Get_punctaj());
+        query.exec();
+    }
+}
