@@ -135,3 +135,21 @@ void DatabaseManager::AdaugaMeciCastigator(MeciCastigator &mecicastigator)
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaMeci(Meci &meci)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO meci(id, id_participant1, id_participant2, id_etapa, id_tur,  data, ora)"
+                      "VALUES(:id, :id_participant1, :id_participant2, :id_etapa, :id_tur,  :data, :ora)");
+        query.bindValue(":id", meci.Get_id());
+        query.bindValue(":id_participant1", meci.Get_id_participant1());
+        query.bindValue(":id_participant2", meci.Get_id_participant2());
+        query.bindValue(":id_etapa", meci.Get_id_etapa());
+        query.bindValue(":id_tur", meci.Get_id_tur());
+        query.bindValue(":data", meci.Get_data());
+        query.bindValue(":ora", meci.Get_ora());
+        query.exec();
+    }
+}

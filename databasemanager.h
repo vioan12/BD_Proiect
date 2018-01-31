@@ -11,6 +11,7 @@
 #include"etapa.h"
 #include"tur.h"
 #include"mecicastigator.h"
+#include"meci.h"
 
 class DatabaseManager
 {
@@ -27,6 +28,7 @@ public:
     void AdaugaEtapa(Etapa &etapa);
     void AdaugaTur(Tur &tur);
     void AdaugaMeciCastigator(MeciCastigator &mecicastigator);
+    void AdaugaMeci(Meci &meci);
     bool get_loaded();
 };
 
