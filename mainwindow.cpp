@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainW
     connect(ui->actionAddParticipant,&QAction::triggered,this,&MainWindow::OnAddParticipant);
     connect(ui->actionAddOrganizatie,&QAction::triggered,this,&MainWindow::OnAddOrganizatie);
     connect(ui->actionAddCategorieGreutate,&QAction::triggered,this,&MainWindow::OnAddCategorieGreutate);
+    connect(ui->actionDeleteParticipant,&QAction::triggered,this,&MainWindow::OnDeleteParticipant);
 }
 
 void MainWindow::OnAddParticipant()
@@ -32,6 +33,7 @@ void MainWindow::OnAddParticipant()
         ui->TableParticipant->setItem(count,5,new QTableWidgetItem(idorganizatie));
         Participant participant(id.toInt(),nume,varsta,experienta,idgreutate.toInt(),idorganizatie.toInt());
         DBM.AdaugaParticipant(participant);
+        Participanti.append(participant);
     }
 
 }
@@ -50,6 +52,7 @@ void MainWindow::OnAddOrganizatie()
         ui->TableOrganizatie->setItem(count,2,new QTableWidgetItem(oras));
         Organizatie organizatie(id.toInt(),nume,oras);
         DBM.AdaugaOrganizatie(organizatie);
+        Organizatii.append(organizatie);
     }
 
 }
@@ -67,8 +70,73 @@ void MainWindow::OnAddCategorieGreutate()
         ui->TableCategorieGreutate->setItem(count,1,new QTableWidgetItem(greutate));
         CategorieGreutate categoriegreutate(id.toInt(),greutate);
         DBM.AdaugaCategorieGreutate(categoriegreutate);
+        CategoriiGreutate.append(categoriegreutate);
     }
 
+}
+
+void MainWindow::OnDeleteParticipant()
+{
+    QList<QTableWidgetItem*> selectionRangeList = this->ui->TableParticipant->selectedItems();
+    int rowIndex;
+    QString id,nume,varsta,experienta,idgreutate,idorganizatie;
+    QListIterator<QTableWidgetItem*> selectionRangeListIter(selectionRangeList);
+    while(selectionRangeListIter.hasNext())
+    {
+        rowIndex = ((int)((QTableWidgetItem*)selectionRangeListIter.next())->row());
+        id=this->ui->TableParticipant->item(rowIndex,0)->text();
+        nume=this->ui->TableParticipant->item(rowIndex,1)->text();
+        varsta=this->ui->TableParticipant->item(rowIndex,2)->text();
+        experienta=this->ui->TableParticipant->item(rowIndex,3)->text();
+        idgreutate=this->ui->TableParticipant->item(rowIndex,4)->text();
+        idorganizatie=this->ui->TableParticipant->item(rowIndex,5)->text();
+        Participant participant(id.toInt(),nume,varsta,experienta,idgreutate.toInt(),idorganizatie.toInt());
+        /*
+        for(int i=0;i<Participanti.length(); i++)
+        {
+            if((int)participant.Get_id() == (int)Participanti.at(i).Get_id())
+            {
+                Participanti.removeAt(i);
+            }
+        }
+        */
+        this->ui->TableParticipant->removeRow(rowIndex);
+    }
+}
+
+void MainWindow::OnDeleteOrganizatie()
+{
+    QList<QTableWidgetItem*> selectionRangeList = this->ui->TableOrganizatie->selectedItems();
+    int rowIndex;
+    QString id,nume,oras;
+    QListIterator<QTableWidgetItem*> selectionRangeListIter(selectionRangeList);
+    while(selectionRangeListIter.hasNext())
+    {
+        rowIndex = ((int)((QTableWidgetItem*)selectionRangeListIter.next())->row());
+        id=this->ui->TableParticipant->item(rowIndex,0)->text();
+        nume=this->ui->TableParticipant->item(rowIndex,1)->text();
+        oras=this->ui->TableParticipant->item(rowIndex,2)->text();
+        Organizatie organizatie(id.toInt(),nume,oras);
+
+        this->ui->TableOrganizatie->removeRow(rowIndex);
+    }
+}
+
+void MainWindow::OnDeleteCategorieGreutate()
+{
+    QList<QTableWidgetItem*> selectionRangeList = this->ui->TableCategorieGreutate->selectedItems();
+    int rowIndex;
+    QString id,greutate;
+    QListIterator<QTableWidgetItem*> selectionRangeListIter(selectionRangeList);
+    while(selectionRangeListIter.hasNext())
+    {
+        rowIndex = ((int)((QTableWidgetItem*)selectionRangeListIter.next())->row());
+        id=this->ui->TableParticipant->item(rowIndex,0)->text();
+        greutate=this->ui->TableParticipant->item(rowIndex,1)->text();
+        CategorieGreutate categoriegreutate(id.toInt(),greutate);
+
+        this->ui->TableCategorieGreutate->removeRow(rowIndex);
+    }
 }
 
 MainWindow::~MainWindow()

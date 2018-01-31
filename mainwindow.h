@@ -23,13 +23,18 @@ private slots:
     void OnAddOrganizatie();
     void OnAddCategorieGreutate();
 
-
 private:
     DatabaseManager DBM;
     Ui::MainWindow *ui;
     AddParticipant *mAddParticipant;
     AddOrganizatie *mAddOrganizatie;
     AddCategorieGreutate *mAddCategorieGreutate;
+    QList<Participant> Participanti;
+    QList<Organizatie> Organizatii;
+    QList<CategorieGreutate> CategoriiGreutate;
+    void OnDeleteParticipant();
+    void OnDeleteOrganizatie();
+    void OnDeleteCategorieGreutate();
 };
 
 #endif // MAINWINDOW_H
