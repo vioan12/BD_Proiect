@@ -8,11 +8,11 @@ CategorieGreutate::CategorieGreutate(int id, QString greutate)
 
 int CategorieGreutate::Get_id()
 {
-    this->id;
+    return this->id;
 }
 
 QString CategorieGreutate::Get_greutate()
 {
-    this->greutate;
+    return this->greutate;
 }
 

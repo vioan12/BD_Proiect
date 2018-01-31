@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "databasemanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ private slots:
 
 
 private:
+    DatabaseManager DBM;
     Ui::MainWindow *ui;
     AddParticipant *mAddParticipant;
     AddOrganizatie *mAddOrganizatie;

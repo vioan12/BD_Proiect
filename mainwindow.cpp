@@ -3,7 +3,6 @@
 #include "addparticipant.h"
 #include "addorganizatie.h"
 #include "addcategoriegreutate.h"
-#include "databasemanager.h"
 
 MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -14,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :  QMainWindow(parent), ui(new Ui::MainW
     connect(ui->actionAddParticipant,&QAction::triggered,this,&MainWindow::OnAddParticipant);
     connect(ui->actionAddOrganizatie,&QAction::triggered,this,&MainWindow::OnAddOrganizatie);
     connect(ui->actionAddCategorieGreutate,&QAction::triggered,this,&MainWindow::OnAddCategorieGreutate);
-    DatabaseManager DBM;
 }
 
 void MainWindow::OnAddParticipant()
@@ -32,6 +30,8 @@ void MainWindow::OnAddParticipant()
         ui->TableParticipant->setItem(count,3,new QTableWidgetItem(experienta));
         ui->TableParticipant->setItem(count,4,new QTableWidgetItem(idgreutate));
         ui->TableParticipant->setItem(count,5,new QTableWidgetItem(idorganizatie));
+        Participant participant(id.toInt(),nume,varsta,experienta,idgreutate.toInt(),idorganizatie.toInt());
+        DBM.AdaugaParticipant(participant);
     }
 
 }
@@ -48,6 +48,8 @@ void MainWindow::OnAddOrganizatie()
         ui->TableOrganizatie->setItem(count,0,new QTableWidgetItem(id));
         ui->TableOrganizatie->setItem(count,1,new QTableWidgetItem(nume));
         ui->TableOrganizatie->setItem(count,2,new QTableWidgetItem(oras));
+        Organizatie organizatie(id.toInt(),nume,oras);
+        DBM.AdaugaOrganizatie(organizatie);
     }
 
 }
@@ -63,6 +65,8 @@ void MainWindow::OnAddCategorieGreutate()
         ui->TableCategorieGreutate->insertRow(count);
         ui->TableCategorieGreutate->setItem(count,0,new QTableWidgetItem(id));
         ui->TableCategorieGreutate->setItem(count,1,new QTableWidgetItem(greutate));
+        CategorieGreutate categoriegreutate(id.toInt(),greutate);
+        DBM.AdaugaCategorieGreutate(categoriegreutate);
     }
 
 }
