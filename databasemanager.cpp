@@ -107,3 +107,17 @@ void DatabaseManager::AdaugaEtapa(Etapa &etapa)
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaTur(Tur &tur)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO tur(id, nume, punctaj)"
+                      "VALUES(:id, :nume, :punctaj)");
+        query.bindValue(":id", tur.Get_id());
+        query.bindValue(":nume", tur.Get_nume());
+        query.bindValue(":punctaj", tur.Get_punctaj());
+        query.exec();
+    }
+}

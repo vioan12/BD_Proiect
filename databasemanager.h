@@ -9,6 +9,7 @@
 #include"clasament.h"
 #include"clasamentgreutate.h"
 #include"etapa.h"
+#include"tur.h"
 
 class DatabaseManager
 {
@@ -23,6 +24,7 @@ public:
     void AdaugaClasament(Clasament &clasament);
     void AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreutate);
     void AdaugaEtapa(Etapa &etapa);
+    void AdaugaTur(Tur &tur);
     bool get_loaded();
 };
 
