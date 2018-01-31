@@ -7,6 +7,7 @@
 #include"categoriegreutate.h"
 #include"organizatie.h"
 #include"clasament.h"
+#include"clasamentgreutate.h"
 
 class DatabaseManager
 {
@@ -19,6 +20,7 @@ public:
     void AdaugaCategorieGreutate(CategorieGreutate &categoriegreutate);
     void AdaugaOrganizatie(Organizatie &organizatie);
     void AdaugaClasament(Clasament &clasament);
+    void AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreutate);
     bool get_loaded();
 };
 

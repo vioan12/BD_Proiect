@@ -80,3 +80,17 @@ void DatabaseManager::AdaugaClasament(Clasament &clasament)
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreutate)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO clasamentgreutate(id_clasament, nume, id_catgreutate )"
+                      "VALUES(:id_clasament, :nume, :id_catgreutate)");
+        query.bindValue(":id_clasament", clasamentgreutate.Get_id_clasament());
+        query.bindValue(":nume", clasamentgreutate.Get_nume());
+        query.bindValue(":id_catgreutate", clasamentgreutate.Get_id_catgreutate());
+        query.exec();
+    }
+}
