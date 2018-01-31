@@ -10,6 +10,7 @@
 #include"clasamentgreutate.h"
 #include"etapa.h"
 #include"tur.h"
+#include"mecicastigator.h"
 
 class DatabaseManager
 {
@@ -25,6 +26,7 @@ public:
     void AdaugaClasamentGreutate(ClasamentGreutate &clasamentgreutate);
     void AdaugaEtapa(Etapa &etapa);
     void AdaugaTur(Tur &tur);
+    void AdaugaMeciCastigator(MeciCastigator &mecicastigator);
     bool get_loaded();
 };
 

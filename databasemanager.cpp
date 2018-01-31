@@ -121,3 +121,17 @@ void DatabaseManager::AdaugaTur(Tur &tur)
         query.exec();
     }
 }
+
+void DatabaseManager::AdaugaMeciCastigator(MeciCastigator &mecicastigator)
+{
+    if(get_loaded()==true)
+    {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO mecicastigator(id_meci, scor, id_castigator)"
+                      "VALUES(:id_meci, :scor, :id_castigator)");
+        query.bindValue(":id_meci", mecicastigator.Get_id_meci());
+        query.bindValue(":scor", mecicastigator.Get_scor());
+        query.bindValue(":id_castigator", mecicastigator.Get_id_castigator());
+        query.exec();
+    }
+}
